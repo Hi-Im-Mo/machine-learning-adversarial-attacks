@@ -42,3 +42,16 @@ The 'unstemmed_attack.ipynb' file contains the scripts for the start of the gene
 The 'stemmed_attack.ipynb' contains the scripts for the advanced preprocessing method intended to defend the trained NLP classifier from *TextFooler* transformation attacks. 'Stemming' the dataset refers to utilize an algorithm for classifying the individual characters that compose a word before tokenization. Fortunately, the Natural Language Toolkit from from Python's base libraries contains a tool to encode a string this exact way. The PorterStemmer() function takes a string a classifies individual consonants as 'c', individual vowels as 'v', subsequent consonants as 'C', and subsequent vowels as 'V'. This encoding method strengthens the model against adversarial transformation attacks by giving the algorithm a method to dicern semantic changes in the data. Thus, when the adversarial model attempts to transform a word, the stemmed encoding of the word changes significantly and the model can recognize the attempt to change its training data. The improved resilience is demonstrated, and far greater when the length of training data in the set is maximized. 
 
 ## Discussion
+So, in short, we found that stemming during tokenization gives the model more semantic understanding about words, which better shields our model from adversarial transformation attacks like we demonstrated earlier. Using the methods listed above, we succesfully caused a natural language processing model to go rogue and misclassify the sentiment of text examples, then we demonstrated a way to utilize adversarial attack models to learn about the robustness of a given model & strengthen its resilience to poisioned data. 
+
+You might have the lingering question as to why it's important that we study adversarial attack on natural language processing when we already have large language models far more complex than text classifiers?
+
+If we think about NLP models as the building blocks for far more complex systems like the chatbot & assistant models used by Alexa, Siri and ChatGPT, then it becomes vital that we understand the full capabilities and limitations of modular components of the system. When you build a stack of blocks, you want blocks to be strong and secure so that when the stack becomes taller, it does not collapse under the weakness of its blocks. Adversarial AI in NLP is an ever-expanding field and it is of peak importance that we understand its role in LLMs and RNNs with NLP components before shipping any of these complex systems into production use. Otherwise, they will still be vulnerable to attacks just like our unstemmed dataset could be easily transformed into ineffectual training data. 
+
+## Contributors
+|LinkedIn     |
+|---------|
+|[Karson Kosek](https://www.linkedin.com/in/karson-kosek-75981128a/)|
+|[Morgan Escue](https://www.linkedin.com/in/morgan-martin-a41433186/) |
+|[Forest Prodan](https://www.linkedin.com/in/forest-prodan-728957248/) |
+|[Nargiz Shemmsulldin](https://www.linkedin.com/in/nargiz-shemssulldin-a115322a3/) |
