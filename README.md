@@ -4,7 +4,7 @@
 ## Project Objectives:
 * Understand & implement the basics of Natural Language Processing (NLP) 
 * Describe the use-case differences between pre-trained and trained NLP models
-* Generate adversarial NLP examples to probe and strengthen on our NLP model
+* Generate adversarial NLP examples to probe and strengthen our NLP model
 * Importance in securing ML and AI models
 * Future direction of adversarial application in LLM research
 
